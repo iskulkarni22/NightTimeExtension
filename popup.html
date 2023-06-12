@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        min-width: 300px;
+        text-align: center;
+        background-image: url(https://t4.ftcdn.net/jpg/02/44/74/51/240_F_244745114_mK5n4nO4sAbJph8cdTrMT75uhetthlwJ.jpg);
+    }
+    h1 { 
+        font-family: 'DynaPuff', cursive;
+        color: whitesmoke;
+    }
+    p, .button {
+        font-family: 'Gaegu', cursive;
+        font-size: large;
+    }
+    p {
+        color: whitesmoke;
+    }
+    .button {
+        margin: auto;
+        background-color: rgb(62, 108, 154);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 5rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+    }
+    .row {
+        padding: 0 0.25rem;
+        pointer-events: none;
+    }
+    .circle {
+        position: absolute;
+        height: 2rem;
+        width: 3rem;
+        border-radius: 1.5rem;
+        background-color: lightblue;
+        pointer-events: none;
+    }
+
+    @keyframes moveCircleRight {
+        from {
+            left: 0;
+            /* background-color: lightblue; */
+        }
+        to {
+            left: 100%;
+            width: 2rem;
+            transform: translateX(-100%);
+            /* background-color: lightgray; */
+        }
+    }
+
+    @keyframes moveCircleLeft {
+        from {
+            left: 100%;
+            width: 2rem;
+            transform: translateX(-100%);
+            /* background-color: lightgray; */
+        }
+        to {
+            left: 0;
+            /* background-color: lightblue; */
+        }
+    }
+
+    @keyframes backgroundPurple {
+        from {
+            background-color: rgb(62, 108, 154);
+        }
+        to {
+            background-color: rgb(108, 151, 230);
+        }
+    }
+
+    @keyframes backgroundBlue {
+        from {
+            background-color: rgb(108, 151, 230);
+        }
+        to {
+            background-color: rgb(62, 108, 154);
+        }
+    }
+    
+</style>
+
+
+<body class="popup">
+    <h1> Night Time</h1>
+    <p>Extension to apply dark mode theme to websites you visit.</p>
+    <div class="button">
+        <div class="row">Dark</div>
+        <div class="row">Off</div>
+        <div class="circle"></div>
+    </div>
+   
+</body>
+<script src="./popup.js"></script>
+</html>
